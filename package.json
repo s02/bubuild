@@ -1,0 +1,23 @@
+{
+  "name": "@xa/bubuild",
+  "version": "1.0.0",
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://us-central1-npm.pkg.dev/bubuild/s02-bubuild/"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vite": "^7.1.5"
+  }
+}
