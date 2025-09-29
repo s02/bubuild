@@ -1,12 +1,11 @@
-name: Build
-run-name: Build ${{ inputs.deploy_target }} by @${{ github.actor }}
+name: Build and Publish
 
 on:
   workflow_dispatch:
 
 jobs:
   build:
-    name: Build
+    name: Build and Publish
     runs-on: self-hosted
     steps:
       - name: Check Out Sources
