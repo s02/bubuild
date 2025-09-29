@@ -15,7 +15,7 @@ jobs:
       - name: Run Build
         run: npm run build  
       - name: Configure npm repository
-        run: .ci/setup-npm-repo.sh
+        run: .ci/setup-npm-repo
 
       - name: Publish
         run: npm publish

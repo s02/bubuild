@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 GCLOUD_NPM_REPO=https://us-central1-npm.pkg.dev/bubuild/s02-bubuild
 
 echo Adding authentication information to .npmrc
