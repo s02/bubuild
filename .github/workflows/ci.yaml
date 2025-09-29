@@ -18,5 +18,9 @@ jobs:
         run: npm install
       - name: Run Build
         run: npm run build  
-      - name: Publish
-        run: npm publish
+      - name: Upload Packaged NPM Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-package-archive
+          path: dist
+          if-no-files-found: error
