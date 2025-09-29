@@ -1,6 +1,6 @@
 {
   "name": "bubuild",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "type": "module",
   "publishConfig": {
     "registry": "https://us-central1-npm.pkg.dev/bubuild/s02-bubuild/"
