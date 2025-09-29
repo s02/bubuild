@@ -3,23 +3,14 @@ name: Build
 on:
   workflow_dispatch:
 
-env:
-  WORKFLOW_NAME: Build
-
 jobs:
   build:
-    name: Build v${{ steps.package-version.outputs.version }}
+    name: Build
+    run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
     runs-on: self-hosted
     steps:
       - name: Check Out Sources
         uses: actions/checkout@v4   
-      - name: Get package version
-        id: package-version
-        run: |
-          $version = (Get-Content package.json | ConvertFrom-Json).version
-          echo "version=$version" >> $env:GITHUB_OUTPUT
-          echo "Package version: $version"
-          echo "::notice title=Build v$version"
       - name: Configure npm repository
         run: |
           chmod +x .ci/setup-npm-repo.sh
