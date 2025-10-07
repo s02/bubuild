@@ -10,13 +10,7 @@ jobs:
     steps:
       - name: Check Out Sources
         uses: actions/checkout@v4   
-      - name: Configure npm repository
-        run: |
-          chmod +x .ci/setup-npm-repo.sh
-          .ci/setup-npm-repo.sh   
       - name: Install NPM Dependencies
         run: npm install
       - name: Run Build
         run: npm run build  
-      - name: Publish
-        run: npm publish
